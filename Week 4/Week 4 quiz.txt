@@ -1,0 +1,43 @@
+1) def mystery(l):
+  if (l == []):
+    return(l)
+  else:
+    mid = len(l)//2
+    if (len(l)%2 == 0):
+      return l[mid-1:mid+1] + mystery(l[:mid-1]+l[mid+1:])
+    else:
+      return l[mid:mid+1] + mystery(l[:mid]+l[mid+1:])
+
+What does mystery([22,14,19,65,82,55]) return?
+
+ANS: [19, 65, 14, 82, 22, 55]
+
+
+2)What is the value of triples after the following assignment?
+ triples = [ (x,y,z) for x in range(1,4) for y in range(2,5) for z in range(5,8) if x+y > z ]
+
+ANS: [(2, 4, 5), (3, 3, 5), (3, 4, 5), (3, 4, 6)]
+
+
+3)Consider the following dictionary.
+ marks = {"Quizzes":{"Mahesh":[3,5,7,8],"Suresh":[9,4,8,8],"Uma":[9,9,7,6]},"Exams":{"Mahesh":[37],"Uma":[36]}}
+
+Which of the following statements does not produce an error.
+(a)marks["Exams"]["Suresh"].extend([44])
+(b)marks["Exams"]["Suresh"] = [44]
+(c)marks["Exams"]["Suresh"].append(44)
+(d)marks["Exams"]["Suresh"][0:] = [44]
+
+ANS: (b)marks["Exams"]["Suresh"] = [44]
+
+
+4)Assume that inventory has been initialized as an empty dictionary:
+ inventory = {}
+
+Which of the following generates an error.
+(a)inventory["Amul"] = ["Mystic Mocha",55]
+(b)inventory["Amul, Mystic Mocha"] = 55
+(c)inventory[["Amul","Mystic Mocha"]] = 55
+(d)inventory[("Amul","Mystic Mocha")] = 55
+
+ANS: (c)inventory[["Amul","Mystic Mocha"]] = 55
