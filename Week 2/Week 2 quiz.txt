@@ -26,7 +26,7 @@ x[3:4] = [723]
 
 After executing them:
 
-ANS: x[3] == 723, y[1] == 43, u[3] == 43, w[1] == 357
+ANS: x[3] == 723, y[1] == 43, u[3] == 723, w[1] == 357
 
 
 3) What is the value of second after executing the following lines?
